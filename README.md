@@ -12,7 +12,13 @@ This project is built in Angular 11 With Web API (.NET Framework 4.7.2)
 
 - Manage Inventory Items With Image Upload Facility.
 
+##### Add Inventory Page
 
+[![Add Inventory Page](https://raw.githubusercontent.com/Kishan1824/InventoryAPI/master/InventoryAPI/InventoryItemUpload/AddPage.png "Add Inventory Page")](https://raw.githubusercontent.com/Kishan1824/InventoryAPI/master/InventoryAPI/InventoryItemUpload/AddPage.png "Add Inventory Page")
+
+
+##### List Inventory Page
+![List Inventory Page](https://raw.githubusercontent.com/Kishan1824/InventoryAPI/master/InventoryAPI/InventoryItemUpload/ListPage.png "List Inventory Page")
 ## Tech
 
 InventoryApp uses a number of open source packages to work properly:
