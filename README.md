@@ -19,6 +19,8 @@ This project is built in Angular 11 With Web API (.NET Framework 4.7.2)
 
 ##### List Inventory Page
 ![List Inventory Page](https://raw.githubusercontent.com/Kishan1824/InventoryAPI/master/InventoryAPI/InventoryItemUpload/ListPage.png "List Inventory Page")
+
+![List Inventory Page](https://raw.githubusercontent.com/Kishan1824/InventoryAPI/master/InventoryAPI/InventoryItemUpload/2021-06-01-16-36-48.mp4 "List Inventory Page")
 ## Tech
 
 InventoryApp uses a number of open source packages to work properly:
