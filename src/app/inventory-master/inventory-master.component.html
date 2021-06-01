@@ -1,0 +1,81 @@
+<h3>{{this.formTitle}}</h3>
+
+<form [formGroup]="this.inventoryMaster" (ngSubmit)="addUpdateInventory(inventoryMaster)" class="example-form">
+
+    <table class="example-full-width" cellspacing="0">
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Item Name</mat-label>
+                    <input matInput placeholder="Enter Item Name" value="" formControlName="ItemName" type="text">
+                    <!-- error -->
+                    <mat-error *ngIf="errorHandling('ItemName', 'required')">
+                        You must provide an<strong> item name</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Item Description</mat-label>
+                    <input matInput placeholder="Enter Item Description" value="" formControlName="ItemDesc">
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Item Quantity</mat-label>
+                    <input matInput placeholder="Enter Item Quantity" value="" formControlName="ItemQty" type="number">
+                    <!-- error -->
+                    <mat-error *ngIf="errorHandling('ItemQty', 'required')">
+                        You must provide an<strong> item qty</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Item Price</mat-label>
+                    <input matInput placeholder="Enter Item Price" value="" formControlName="ItemPrice" type="number">
+                     <!-- error -->
+                     <mat-error *ngIf="errorHandling('ItemPrice', 'required')">
+                        You must provide an<strong> item price</strong>
+                    </mat-error>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="position: relative;">
+                    <mat-toolbar>
+                        <!-- Display files names -->
+                        <input matInput [(ngModel)]="fileAttr" readonly name="name"
+                            [ngModelOptions]="{standalone: true}" />
+
+                        <!-- Browse Button -->
+                        <button mat-flat-button color="primary">
+                            Browse File
+                        </button>
+                    </mat-toolbar>
+
+                    <!-- Fetch selected filed on change -->
+                    <input type="file" #fileInput id="uploadFile" name="uploadFile" accept="image/*"
+                        (change)="onFileChange($event)" />   
+                </div>
+            </td>
+            <td>
+                <img [src]="itemImageSrc" *ngIf="itemImageSrc" style="height: 150px; width: 150px">
+            </td>
+        </tr>
+    </table>
+    <section>
+        <div class="example-button-row">
+            <button type="submit" mat-raised-button color="primary" [disabled]="!inventoryMaster.valid">Save
+                Inventory</button>
+            <button type="button" mat-raised-button color="warn" routerLink="/inventoryList">Back To List</button>
+        </div>
+    </section>
+</form>

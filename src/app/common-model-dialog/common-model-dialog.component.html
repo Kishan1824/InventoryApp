@@ -1,0 +1,7 @@
+<mat-list role="list" *ngIf="modelData">
+    <mat-list-item role="listitem"><b>Item Name :</b>{{modelData.ItemName}}</mat-list-item>   
+    <mat-list-item role="listitem"><b>Item Description :</b>{{modelData.ItemDesc}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Item Quantity :</b>{{modelData.ItemQty}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Item Price :</b>{{modelData.ItemPrice}}</mat-list-item>
+    <mat-list-item role="listitem"><b>Item Image :</b><img [src]="this.itemImage" width="60" height="60" /></mat-list-item>
+</mat-list>
